@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    background-color: #0B2434;
+    padding: 20px;
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    background-color: #F5F5F5;
+    height: 400px;
+    max-width: 800px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.instructions, .numRolls {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+}
+
+.dice-container {
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.die-face {
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+.die-num {
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.roll-dice {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 6px;
+    background-color: #5035FF;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Karla', sans-serif;
+    cursor: pointer;
+}
+
+.roll-dice:focus {
+    outline: none;
+}
+
+.roll-dice:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two,.three{
+    position: relative;;
+}
+.two .die-num:nth-child(1),.three .die-num:nth-child(1){
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.two .die-num:nth-child(2), .three .die-num:nth-child(2){
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.three .die-num:nth-child(3), .five .die-num:nth-child(3){
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.four, .five, .six{
+    position: relative;
+    display: grid;
+    padding: 5px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.curTime, .bestTime{
+    position: absolute;
+    top: 2px;
+}
+
+.curTime{
+    right: 5px;
+    color: rgb(30, 130, 30);
+}
+
+.bestTime{
+    left: 5px;
+    color: rgb(30, 30, 130);
+}
+
+.bestTime span{
+    color: #801616;
+}
+
